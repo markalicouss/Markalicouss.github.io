@@ -40,18 +40,13 @@
         button:hover {
             background-color: #e6b800;
         }
-        .total-container {
-            margin-top: 15px;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
 
 <h1>TrailBlaze Customs Inquiry Form</h1>
 
-<form id="inquiryForm">
+<form action="#" method="POST">
     <label for="name">Full Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -76,11 +71,10 @@
     <input type="number" id="quantity" name="quantity" required>
 
     <label for="price">Price Per Service ($):</label>
-    <input type="number" id="price" name="price" value="150" readonly>
+    <input type="number" id="price" name="price" value="100" readonly>
 
-    <div class="total-container">
-        Total Cost: $<span id="total">0.00</span>
-    </div>
+    <label for="total">Total Cost ($):</label>
+    <input type="text" id="total" name="total" readonly>
 
     <button type="button" onclick="calculateTotal()">Calculate Total</button>
     <button type="submit">Submit Inquiry</button>
@@ -91,7 +85,7 @@
         const quantity = document.getElementById('quantity').value;
         const price = document.getElementById('price').value;
         const total = quantity * price;
-        document.getElementById('total').textContent = total.toFixed(2);
+        document.getElementById('total').value = total.toFixed(2);
     }
 </script>
 
