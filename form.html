@@ -46,38 +46,33 @@
 
 <h1>TrailBlaze Customs Inquiry Form</h1>
 
-<form action="#" method="POST">
+<form id="inquiryForm">
     <label for="name">Full Name:</label>
     <input type="text" id="name" name="name" required>
 
     <label for="email">Email Address:</label>
     <input type="email" id="email" name="email" required>
 
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone">
+    <label for="quantity">Quantity of Services:</label>
+    <input type="number" id="quantity" name="quantity" required>
 
-    <label for="vehicle">Vehicle Make/Model:</label>
-    <input type="text" id="vehicle" name="vehicle" required>
+    <label for="price">Price Per Service ($):</label>
+    <input type="number" id="price" name="price" value="100" readonly>
 
-    <label for="services">Interested Services:</label>
-    <select id="services" name="services" required>
-        <option value="suspension">Suspension Lift</option>
-        <option value="tires">All-Terrain Tires</option>
-        <option value="paint">Custom Paint/Wrap</option>
-        <option value="lighting">Lighting/Winches</option>
-    </select>
+    <label for="total">Total Cost ($):</label>
+    <input type="text" id="total" name="total" readonly>
 
-    <label for="budget">Estimated Budget ($):</label>
-    <input type="number" id="budget" name="budget" required>
-
-    <label for="timeline">Preferred Completion Date:</label>
-    <input type="date" id="timeline" name="timeline" required>
-
-    <label for="comments">Additional Comments:</label>
-    <textarea id="comments" name="comments" rows="4"></textarea>
-
-    <button type="submit">Submit Inquiry</button>
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
 </form>
+
+<script>
+    function calculateTotal() {
+        const quantity = document.getElementById('quantity').value;
+        const price = document.getElementById('price').value;
+        const total = quantity * price;
+        document.getElementById('total').value = total.toFixed(2);
+    }
+</script>
 
 </body>
 </html>
