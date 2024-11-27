@@ -68,4 +68,38 @@
     </select>
 
     <label for="quantity">Quantity of Services:</label>
-    <input type="number" id="quantity" name="qua
+    <input type="number" id="quantity" name="quantity" required>
+
+    <label for="price">Price Per Service ($):</label>
+    <input type="number" id="price" name="price" value="100" readonly>
+
+    <label for="discount">Discount ($):</label>
+    <input type="text" id="discount" name="discount" value="0.00" readonly>
+
+    <label for="total">Total Cost ($):</label>
+    <input type="text" id="total" name="total" readonly>
+
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+    <button type="submit">Submit Inquiry</button>
+</form>
+
+<script>
+    function calculateTotal() {
+        const quantity = document.getElementById('quantity').value;
+        const price = document.getElementById('price').value;
+        let discount = 0;
+        let total = quantity * price;
+
+        // Apply discount if the quantity is greater than or equal to 5
+        if (quantity >= 5) {
+            discount = total * 0.1; // 10% discount
+            total -= discount;
+        }
+
+        document.getElementById('discount').value = discount.toFixed(2);
+        document.getElementById('total').value = total.toFixed(2);
+    }
+</script>
+
+</body>
+</html>
