@@ -85,8 +85,8 @@
 
 <script>
     function calculateTotal() {
-        const quantity = document.getElementById('quantity').value;
-        const price = document.getElementById('price').value;
+        const quantity = parseInt(document.getElementById('quantity').value);
+        const price = parseFloat(document.getElementById('price').value);
         let discount = 0;
         let total = quantity * price;
 
