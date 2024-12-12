@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrailBlaze Customs - Image Gallery</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #eaeaea; color: #333; text-align: center; }
+        header, footer { background-color: #222; color: #ffcc00; padding: 20px; }
+        nav a { margin: 0 15px; color: #ffcc00; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin: 20px; }
+        img { max-width: 300px; height: auto; border: 2px solid #ccc; border-radius: 5px; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Image Gallery</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="how_to_install_lift_kit.html">How to Install a Lift Kit</a>
+        <a href="text_terms.html">Text/Terms</a>
+        <a href="links.html">Links</a>
+    </nav>
+</header>
+
+<div class="gallery">
+    <img src="https://preview.redd.it/1st-gen-4runner-size-lifted-2-on-31s-next-to-this-sexy-new-v0-4wwfreha26kd1.jpg" alt="Lifted Vehicle">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZp4XDu1xX7LEQPVpKuIWRyP65iALH_7pgVQ&s" alt="Modified Vehicle">
+</div>
+
+<footer>
+    <p>&copy; 2024 TrailBlaze Customs</p>
+</footer>
+</body>
+</html>
