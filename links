@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrailBlaze Customs - Links</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #eaeaea; color: #333; }
+        header, footer { background-color: #222; color: #ffcc00; padding: 20px; }
+        nav a { margin: 0 15px; color: #ffcc00; text-decoration: none; }
+        nav a:hover { text-decoration: underline; }
+        .content { margin: 20px auto; width: 80%; text-align: left; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Useful Links</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="how_to_install_lift_kit.html">How to Install a Lift Kit</a>
+        <a href="text_terms.html">Text/Terms</a>
+        <a href="image_gallery.html">Image Gallery</a>
+    </nav>
+</header>
+
+<div class="content">
+    <ul>
+        <li><a href="https://www.jeep.com/">Jeep Official Website</a></li>
+        <li><a href="https://www.overlandbound.com/">Overland Bound</a></li>
+        <li><a href="https://www.reddit.com/r/4x4/">Reddit 4x4 Community</a></li>
+    </ul>
+</div>
+
+<footer>
+    <p>&copy; 2024 TrailBlaze Customs</p>
+</footer>
+</body>
+</html>
